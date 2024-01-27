@@ -1,0 +1,392 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+@import url('https://fonts.cdnfonts.com/css/sf-pro-display?styles=98774,98777,98776,98772,98773,98775,98770,98771,98769');
+#cart{
+    width: 100%;
+    height: auto;
+    padding: 28px 2px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'SF Pro Display', sans-serif;
+}
+#cart .product{
+    width: 72vw;
+    height: 24vh;
+    min-height: 80px;
+    border: 2px solid #aaa;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2px 18px;
+    margin: 16px 0;
+    overflow: hidden;
+}
+#cart .product .ic{
+    width: 140px;
+    height: 104px;
+    background-color: #f2f2f2;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+#cart .product .ic img{
+    max-width: 88px;
+    max-height: 92px;
+}
+
+#cart .product .details {
+    width: calc(100%/2);
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    padding: 0;
+}
+#cart .product .details .title{
+    font-size: 28px;
+    font-weight: 600;
+    margin: 12px 0;
+    cursor: pointer;
+}
+#cart .product .details .qte{
+    width: auto;
+    max-width: 180px;
+    background-color: #fff;
+    color: #777;
+    border: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4px;
+}
+#cart .product .details .qte input{
+    border: none;
+    outline: none;
+    padding: 3px;
+    width: 80px;
+    text-align: center;
+    color: #777;
+}
+#cart .product .details .icon{
+    width: 22px;
+    height: 22px;
+    color: #777;
+    margin: 12px 0;
+    cursor: pointer;
+}
+#cart .mode-exp{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 16px 0;
+}
+#cart .mode-exp .exp-opt{
+    width: 72vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 16px 0;
+}
+#cart .mode-exp .exp-opt label{
+    color: #777;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+#cart .code-promo, .ttc{
+    width: 72vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: end;
+    margin: 18px 0;
+}
+
+#cart .code-promo input {
+    width: 324px;
+    padding: 14px 20px;
+    text-align: center;
+    border-radius: 6px;
+    border: 1.8px solid #aaa;
+    outline: none;
+    font-weight: 600;
+    margin: 12px 0;
+}
+#cart .code-promo .error{
+    font-size: 12.5px;
+    font-weight: 500;
+    color: #ff0000;
+}
+
+#cart .ttc .price-field{
+    width: 300px;
+    padding: 15px;
+    border-radius: 6px;
+    border: 1.8px solid #aaa;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#cart .ttc .price-field .total{
+    font-size: 16px;
+    font-weight: 600;
+    color: #777;
+}
+#cart .ttc .price-field .price{
+    font-size: 16px;
+    font-weight: 600;
+    color: #0048D5;
+}
+
+#cart .bbt{
+    width: 300px;
+    padding: 16px;
+    border-radius: 24px;
+    background-color: #0048D5;
+    color: #fff;
+    margin-top: 24px;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 300;
+    font-family: 'SF Pro Display', sans-serif;
+}
+
+@media screen and (max-width: 758px) {
+    #cart .product{
+    width: 90vw;
+    height: 20vh;
+    min-height: 60px;
+    padding: 2px 8px;
+
+}
+
+#cart .product .ic{
+    width: 72px;
+    height: 64px;
+    background-color: #f2f2f2;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+#cart .product .ic img{
+    max-width: 48px;
+    max-height: 52px;
+
+}
+#cart .product .details {
+    width: 190px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    text-align: left;
+    padding: 4px;
+    background-color: aqua;
+}
+
+#cart .product .details .title{
+    font-size: 16px;
+    font-weight: 600;
+    margin: 8px 0;
+    cursor: pointer;
+    width: 100%;
+}
+#cart .product .details .qte{
+    width: auto;
+    max-width: 128px;
+    background-color: #fff;
+    color: #777;
+    border: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4px;
+}
+#cart .product .details .qte input{
+    border: none;
+    outline: none;
+    padding: 3px;
+    width: 60px;
+    text-align: center;
+    color: #777;
+}
+#cart .product .details .icon{
+    width: 18px;
+    height: 18px;
+    color: #777;
+    margin: 8px 0;
+    cursor: pointer;
+}
+#cart .product .price{
+    font-size: 12px;
+}
+
+#cart .mode-exp .exp-opt{
+    width: 90vw;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+}
+#cart .mode-exp .exp-opt label{
+    color: #777;
+    font-size: 14px;
+    font-weight: normal;
+    text-align: center;
+}
+
+#cart .code-promo, .ttc{
+    width: 100vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 18px 0;
+}
+
+#cart .code-promo input {
+    width: 324px;
+    padding: 14px 20px;
+    text-align: center;
+    border-radius: 6px;
+    border: 1.8px solid #aaa;
+    outline: none;
+    font-weight: 600;
+    margin: 12px 0;
+}
+#cart .code-promo .error{
+    font-size: 12.5px;
+    font-weight: 500;
+    color: #ff0000;
+}
+
+#cart .ttc .price-field{
+    width: 300px;
+    padding: 15px;
+    border-radius: 6px;
+    border: 1.8px solid #aaa;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+}
+</style>
+<section id="cart">
+    <div class="product">
+        <div class="ic">
+            <img src="./assets/p1.png" alt="">
+        </div>
+
+        <div class="details">
+            <h2 class="title">1 Protection Elite Trainer Box ETB</h2>
+            
+           
+           <div class="qte">
+                Quantite
+                <input type="number" value="1">
+            </div>
+
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 512 512"><path d="M112 112l20 320c.95 18.49 14.4 32 32 32h184c17.67 0 30.87-13.51 32-32l20-320" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="32" d="M80 112h352"/><path d="M192 112V72h0a23.93 23.93 0 0124-24h80a23.93 23.93 0 0124 24h0v40M256 176v224M184 176l8 224M328 176l-8 224" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/></svg>
+        </div>
+
+        <div class="price">
+            32,90€
+        </div>
+    </div>
+
+    <div class="product">
+        <div class="ic">
+            <img src="./assets/p3.png" alt="">
+        </div>
+
+        <div class="details">
+            <h2 class="title">1 Protection Elite Trainer Box ETB</h2>
+            
+            <div class="qte">
+                Quantite
+                <input type="number" value="1">
+            </div>
+
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 512 512"><path d="M112 112l20 320c.95 18.49 14.4 32 32 32h184c17.67 0 30.87-13.51 32-32l20-320" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="32" d="M80 112h352"/><path d="M192 112V72h0a23.93 23.93 0 0124-24h80a23.93 23.93 0 0124 24h0v40M256 176v224M184 176l8 224M328 176l-8 224" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/></svg>
+        </div>
+
+        <div class="price">
+            3,90€
+        </div>
+    </div>
+
+    <div class="product">
+        <div class="ic">
+            <img src="./assets/p4.png" alt="">
+        </div>
+
+        <div class="details">
+            <h2 class="title">1 Protection Elite Trainer Box ETB</h2>
+            
+            <div class="qte">
+                Quantite
+                <input type="number" value="1">
+            </div>
+
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 512 512"><path d="M112 112l20 320c.95 18.49 14.4 32 32 32h184c17.67 0 30.87-13.51 32-32l20-320" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="32" d="M80 112h352"/><path d="M192 112V72h0a23.93 23.93 0 0124-24h80a23.93 23.93 0 0124 24h0v40M256 176v224M184 176l8 224M328 176l-8 224" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/></svg>
+        </div>
+
+        <div class="price">
+            29,90€
+        </div>
+    </div>
+
+
+    <div class="mode-exp">
+        <h3>Mode d'expédition</h3>
+
+        <div class="exp-opt">
+            <div>
+            <input type="radio" name="relai" id="1">
+            <label for="radio">Livraison en point de retrait Mondial Relay (choix après le paiement)</label>
+            </div>
+            <span class="price">5,90€</span>
+        </div>
+
+        <div class="exp-opt">
+            <div>
+            <input type="radio" name="relai" id="1">
+            <label for="radio">Livraison colissimo</label>
+            </div>
+            <span class="price">7,90€</span>
+        </div>
+    </div>
+
+    <div class="code-promo">
+        <input type="text" name="code" id="code" placeholder="Code Promotionel">
+        <span class="error">ce code promo nes pas compatible avec les réduction actuel</span>
+    </div>
+
+    <div class="ttc">
+        <div class="price-field">
+            <span class="total">Total</span>
+            <span class="price">81,6 TTC</span>
+        </div>
+
+        <div class="bbt">
+            Valider la commande
+        </div>
+    </div>
+</section>
